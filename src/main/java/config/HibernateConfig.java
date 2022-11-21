@@ -8,8 +8,12 @@ package config;
  *
  * @author ngock
  */
+<<<<<<< Updated upstream:src/main/java/config/HibernateConfig.java
 import domainmodel.Category;
 import domainmodel.Product;
+=======
+import domainmodel.KhuyenMai;
+>>>>>>> Stashed changes:src/main/java/config/hibernateconfig.java
 import java.util.Properties;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -33,6 +37,10 @@ public class HibernateConfig {
         properties.put(Environment.SHOW_SQL, "true");
 
         conf.setProperties(properties);
+<<<<<<< Updated upstream:src/main/java/config/HibernateConfig.java
+=======
+conf.addAnnotatedClass(KhuyenMai.class);
+>>>>>>> Stashed changes:src/main/java/config/hibernateconfig.java
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(conf.getProperties()).build();
         FACTORY = conf.buildSessionFactory(registry);
